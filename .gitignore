@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+logs/
+
+# ── Secret-file hardening ───────────────────────────────
+# `.env` alone does NOT match .env.backup / .env.local / .env.prod.
+# Catch every variant, then re-allow the template.
+.env.*
+!.env.example
+*.key
+*.pem
+.venv/
+venv/
